@@ -98,7 +98,7 @@ module.exports= route;
             message:'user already exists with the given email'
         })
     }
-    console.log("ppppp")
+   
     // bcrypt.hash(password,10,async function(err,hash){
     //     if(err){
     //         return res.status(500).json({
