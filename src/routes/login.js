@@ -8,8 +8,6 @@ route.use(cors({
     origin: "*",
 }))
 
-// const secret="ghg"
-
 
 const mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
@@ -25,7 +23,7 @@ var jwt = require('jsonwebtoken');
     
     console.log(userData)
     if (userData) {
-        // is await requred for bcrypt???
+
         let result = await bcrypt.compare(password, userData.password);
         if (result) {
             const token = jwt.sign({
