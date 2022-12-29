@@ -66,7 +66,7 @@ router.post(
         return res.status(409).json({
           status: "Existed Email",
           message:
-            "User already exists with the given email. Pls proceed to signin",
+            "User already exists with the given email. Pls proceed to sign in",
         });
       }
       console.log(password, confirmPassword);

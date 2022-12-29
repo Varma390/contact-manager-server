@@ -11,6 +11,7 @@ app.use(cors());
 app.use("/contacts", (req, res, next) => {
   if (req.headers.authorization) {
     const token = req.headers.authorization;
+    // console.log(token)
 
     if (token) {
       jwt.verify(token, secret, function (err, decoded) {
@@ -33,7 +34,6 @@ app.use("/contacts", (req, res, next) => {
     });
   }
 });
-
 
 app.use("/", UserRoute);
 app.use("/contacts", contactRouter);
