@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const { json } = require("body-parser");
 const bodyParser = require("body-parser");
-const {Contact} = require("../models/schema");
+const { Contact } = require("../models/schema");
 router.use(bodyParser.json());
 
 router.get("/", async (req, res) => {
   try {
-    const contacts = await Contact.find({ user: req.user });
+    const contacts = await Contact.find({ user: req.user }); 
     console.log("1", contacts);
     res.status(200).json({
       status: "Fetched",
@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/contacts/:email", async (req, res) => {
+router.get("/:email", async (req, res) => {
   try {
     const user = await Contact.findOne({ Email: req.params.email });
     if (user.Email) {

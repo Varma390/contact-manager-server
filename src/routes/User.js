@@ -41,7 +41,7 @@ router.post(
       } else {
         res.status(400).json({
           status: "Failed",
-          message: "User is not registered. Pls signup before signin",
+          message: "User is not registered. Pls signup before sign in",
         });
       }
     } catch (e) {
@@ -56,7 +56,7 @@ router.post(
 router.post(
   "/signup",
   body("email").isEmail(),
-  body("password").isLength({ min: 6, max: 16 }),
+  body("password").isLength({ min: 8 }),
   async (req, res) => {
     try {
       console.log(req.body);
@@ -91,7 +91,7 @@ router.post(
         });
         res.json({
           status: "Success",
-          message: "User succesfully created",
+          message: "User successfully created",
           userData,
         });
       });
@@ -119,4 +119,5 @@ router.get("/get", async (req, res) => {
     });
   }
 });
+
 module.exports = router;
