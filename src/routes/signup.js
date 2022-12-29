@@ -11,35 +11,7 @@ route.use(cors({
 }))
 
 route.use(express.json())
-// route.use(bodyParser.json())
-// route.use(bodyParser.urlencoded())
-/* route.post('/register',async (req, res) =>{
-    try{
-        const {email,password,confirmpassword} = req.body;
-        let exist = await Login.findOne({email})
-        if(exist){
-            return res.status(400).send('User Already Exist')
-        }
-        if(password !== confirmpassword){
-            return res.status(400).send('Passwords are not matching');
-        }
-        let newUser =  await Login.create({
-           
-            email,
-            password,
-            confirmpassword
-        })
-        await newUser.save();
-        res.status(200).send('Registered Successfully')
-        
 
-    }
-    catch(err){
-        console.log(err)
-        return res.status(500).send('Internel Server Error')
-    }
-})
- */
 route.post('/register', async (req, res) => {
     try {
         
