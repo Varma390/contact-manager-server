@@ -8,4 +8,4 @@ const db = mongoose.connect("mongodb://localhost/Blog",{ useNewUrlParser: true, 
             .then(() => console.log("connected to Database"))
             .catch((err) => console.log(err));
 
-app.listen(port, () => console.log('Server running......'));
+app.listen(port, () => console.log(`Server is running......on ${port}` ));
