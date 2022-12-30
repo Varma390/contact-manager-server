@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express()
+const allRoutes = require('./routes/route')
+const signroute = require('./routes/user')
 app.use(express.json());
+  
+app.use('/user',allRoutes)
+app.use('/',signroute)
 
-app.get('/api',(req,res) => {
-    res.status(200).send({
-        status : "success"
-    })
-})
 
 module.exports = app
