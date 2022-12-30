@@ -1,10 +1,9 @@
 {
   "name": "contact-manager-server",
   "version": "1.0.0",
-  "description": "10x project",
+  "description": "Full stack project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/index.js"
   },
   "repository": {
@@ -12,7 +11,7 @@
     "url": "git+https://github.com/Varma390/contact-manager-server.git"
   },
   "keywords": [],
-  "author": "",
+  "author": " ",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Varma390/contact-manager-server/issues"
