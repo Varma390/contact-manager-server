@@ -1,14 +1,13 @@
 const mongoose = require("mongoose");
 const { Contact } = require("../models/schema");
 const jwt = require("jsonwebtoken");
-
 let bodyParser = require("body-parser");
 require("dotenv").config();
 const allRoutes = require("express").Router();
-
 const cors = require("cors");
 allRoutes.use(cors());
 allRoutes.use(bodyParser.json());
+
 
 // middleware for jwt verification
 allRoutes.use("/", (req, res, next) => {
